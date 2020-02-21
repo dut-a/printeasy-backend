@@ -13,6 +13,8 @@ class CreatePrints < ActiveRecord::Migration[5.1]
       t.string :placed_on
       t.string :estimated_completion_time
       t.string :status
+      t.integer :user_id
+      t.integer :service_id
 
       t.timestamps
     end
