@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20200220220020) do
     t.string "city"
     t.string "state"
     t.integer "zip"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -38,6 +39,8 @@ ActiveRecord::Schema.define(version: 20200220220020) do
     t.string "placed_on"
     t.string "estimated_completion_time"
     t.string "status"
+    t.integer "user_id"
+    t.integer "service_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -46,6 +49,7 @@ ActiveRecord::Schema.define(version: 20200220220020) do
     t.string "type"
     t.string "cost"
     t.string "time_to_complete"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
