@@ -1,12 +1,12 @@
 class ServiceSerializer < ActiveModel::Serializer
-  attributes :id, :type, :cost, :time_to_complete, :user, :created_at, :updated_at
+  attributes :id, :service_type, :cost, :time_to_complete, :user, :created_at, :updated_at
 
   # TODO: Extract this into a mixin
   def user
     return {
       id: self.object.user.id,
       username: self.object.user.username,
-      type: self.object.user.type,
+      user_type: self.object.user.user_type,
       bio: self.object.user.bio,
       picture: self.object.user.picture,
       phone_number: self.object.user.phone_number,

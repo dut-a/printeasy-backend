@@ -1,7 +1,7 @@
 class UserSerializer < ActiveModel::Serializer
   attributes :id,
              :username,
-             :type,
+             :user_type,
              :bio,
              :picture,
              :phone_number,
