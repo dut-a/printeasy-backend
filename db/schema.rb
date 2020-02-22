@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20200221214458) do
   end
 
   create_table "prints", force: :cascade do |t|
-    t.string "type"
+    t.string "print_type"
     t.integer "number_of_copies"
     t.integer "ordered_by"
     t.integer "fulfilled_by"
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 20200221214458) do
   end
 
   create_table "services", force: :cascade do |t|
-    t.string "type"
+    t.string "service_type"
     t.string "cost"
     t.string "time_to_complete"
     t.integer "user_id"
@@ -57,7 +57,7 @@ ActiveRecord::Schema.define(version: 20200221214458) do
   create_table "users", force: :cascade do |t|
     t.string "username"
     t.string "password_digest"
-    t.string "type"
+    t.string "user_type"
     t.string "bio"
     t.string "picture"
     t.string "phone_number"
