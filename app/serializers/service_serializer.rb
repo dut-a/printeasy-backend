@@ -6,7 +6,7 @@ class ServiceSerializer < ActiveModel::Serializer
     return {
       id: self.object.user.id,
       username: self.object.user.username,
-      type: self.object.user.type,
+      user_type: self.object.user.user_type,
       bio: self.object.user.bio,
       picture: self.object.user.picture,
       phone_number: self.object.user.phone_number,
