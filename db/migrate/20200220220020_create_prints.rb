@@ -1,7 +1,7 @@
 class CreatePrints < ActiveRecord::Migration[5.1]
   def change
     create_table :prints do |t|
-      t.string :type
+      t.string :print_type
       t.integer :number_of_copies
       t.integer :ordered_by
       t.integer :fulfilled_by
