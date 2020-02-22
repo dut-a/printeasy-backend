@@ -73,7 +73,7 @@ class Api::V1::ServicesController < ApplicationController
   private
     def service_params
       params.require(:service).permit(
-        :type,
+        :service_type,
         :cost,
         :time_to_complete,
         :user_id

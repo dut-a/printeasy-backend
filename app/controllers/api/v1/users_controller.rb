@@ -75,7 +75,7 @@ class Api::V1::UsersController < ApplicationController
       params.require(:user).permit(
         :username,
         :password,
-        :type,
+        :user_type,
         :bio,
         :picture,
         :phone_number,
