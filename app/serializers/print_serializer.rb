@@ -41,7 +41,7 @@ class PrintSerializer < ActiveModel::Serializer
   def service
     return {
       id: self.object.service.id,
-      type: self.object.service.type,
+      service_type: self.object.service.service_type,
       cost: self.object.service.cost,
       time_to_complete: self.object.service.time_to_complete,
       user: self.object.service.user # TODO: Should this be 'user_id' instead?
