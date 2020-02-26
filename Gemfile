@@ -46,4 +46,13 @@ gem "jwt", "~> 2.2"
 
 gem "faker", "~> 2.10"
 
+# Use 'Carierwave' for image uploads
+gem 'carrierwave', '~> 2.0'
+
+# Use 'mini_magick' for image 'resizing, etc'
+gem 'mini_magick'
+
+# Use 'file_validators' to do 'file validations'
+gem 'file_validators'
+
 

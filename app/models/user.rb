@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+  # Picture things
+  mount_uploader :picture, PictureUploader
+
   # Associations
   has_many :prints
   has_many :addresses

@@ -17,5 +17,8 @@
 
 private
 
+# Ignore file uploads
+public/uploads
+
 
 
