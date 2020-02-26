@@ -10,15 +10,15 @@ class Print < ApplicationRecord
             :fulfilled_by,
             :payment_method,
             :payment_status,
-            :pickup_location,
             :pickup_type,
-            :delivery_address,
             :placed_on,
             :estimated_completion_time,
             :status,
             :user_id,
             :service_id, presence: true
 
-  validates :pickup_location, :delivery_address, allow_blank: true
+  validates :pickup_location,
+            :delivery_address, presence: true, allow_blank: true
 
 end
+
