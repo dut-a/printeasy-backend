@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20200221214458) do
+ActiveRecord::Schema.define(version: 20200228224207) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -72,6 +72,7 @@ ActiveRecord::Schema.define(version: 20200221214458) do
     t.string "business_hours"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "alt_picture"
   end
 
 end

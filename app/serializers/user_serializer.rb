@@ -4,6 +4,7 @@ class UserSerializer < ActiveModel::Serializer
              :user_type,
              :bio,
              :picture,
+             :alt_picture,
              :phone_number,
              :email_address,
              :physical_address,

@@ -28,22 +28,22 @@ class User < ApplicationRecord
             :email_address,
             :physical_address, presence: true
 
-  validates :picture,
-            :name,
-            :first_name,
-            :middle_name,
-            :last_name,
-            :fax_number,
-            :website,
-            :business_hours, presence: true, allow_blank: true
+  # validates :picture,
+  #           :name,
+  #           :first_name,
+  #           :middle_name,
+  #           :last_name,
+  #           :fax_number,
+  #           :website,
+  #           :business_hours, presence: true, allow_blank: true
 
-  validates :username,
-            :name,
-            :first_name,
-            :middle_name,
-            :last_name,
-              :length => { :within => 3..25 },
-              :format => NAME_REGEX
+  # validates :username,
+  #           :name,
+  #           :first_name,
+  #           :middle_name,
+  #           :last_name,
+  #             :length => { :within => 3..25 },
+  #             :format => NAME_REGEX
 
   validates :username, :uniqueness => true
 
@@ -56,11 +56,11 @@ class User < ApplicationRecord
 
   validates :bio, :length => { :within => 5..250 }
 
-  validates :phone_number, :fax_number, :format => PHONE_REGEX
+  # validates :phone_number, :fax_number, :format => PHONE_REGEX
 
   validates :picture, file_size: { less_than: 10.megabytes }
 
-  validates :website, :format => URL_REGEX
+  # validates :website, :format => URL_REGEX
 
   validate :username_allowed
 
