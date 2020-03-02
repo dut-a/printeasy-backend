@@ -6,6 +6,7 @@ class User < ApplicationRecord
   has_many :prints
   has_many :addresses
   has_many :services
+  accepts_nested_attributes_for :addresses, :prints, :services
 
   # security
   has_secure_password

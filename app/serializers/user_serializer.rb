@@ -15,6 +15,15 @@ class UserSerializer < ActiveModel::Serializer
              :fax_number,
              :website,
              :business_hours,
+             :addresses,
+             :prints,
+             :services,
              :created_at,
              :updated_at
+
+  def prints
+    object.prints.map { |print| PrintSerializer.new(print) }
+  end
+
 end
+

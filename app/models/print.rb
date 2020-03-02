@@ -2,6 +2,7 @@ class Print < ApplicationRecord
   # Associations
   belongs_to :service
   belongs_to :user
+  accepts_nested_attributes_for :service, :user
 
   # Validations
   validates :print_type,
