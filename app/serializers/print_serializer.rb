@@ -17,4 +17,8 @@ class PrintSerializer < ActiveModel::Serializer
              :created_at,
              :updated_at
 
+  # Associations
+  belongs_to :service
+  belongs_to :user
+
 end

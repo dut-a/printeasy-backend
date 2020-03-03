@@ -21,9 +21,10 @@ class UserSerializer < ActiveModel::Serializer
              :created_at,
              :updated_at
 
-  def prints
-    object.prints.map { |print| PrintSerializer.new(print) }
-  end
+  # Associations
+  has_many :prints
+  has_many :addresses
+  has_many :services
 
 end
 

@@ -2,7 +2,6 @@ class Address < ApplicationRecord
   # Associations
   belongs_to :user
   has_many :users
-  accepts_nested_attributes_for :user
 
   # Validations
   validates :line_1, :city, :state, :zip, :user_id, presence: true
