@@ -14,6 +14,8 @@ class PrintSerializer < ActiveModel::Serializer
              :status,
              :user,
              :service,
+             :total_cost,
+             :doc_to_print,
              :created_at,
              :updated_at
 

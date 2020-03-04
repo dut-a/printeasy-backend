@@ -86,7 +86,9 @@ class Api::V1::PrintsController < ApplicationController
         :estimated_completion_time,
         :status,
         :user_id,
-        :service_id
+        :service_id,
+        :total_cost,
+        :doc_to_print
       )
     end
 
