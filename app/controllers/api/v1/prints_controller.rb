@@ -72,7 +72,7 @@ class Api::V1::PrintsController < ApplicationController
 
   private
     def print_params
-      params.require(:print).permit(
+      params.permit(
         :print_type,
         :number_of_copies,
         :ordered_by,

@@ -105,7 +105,7 @@ puts "End: Adding Addresses"
 # 3. Service
 puts "Begin: Adding Services (merchants only)"
 merchant_ids = User.where(user_type: "merchant").pluck(:id)
-periods = ["2 hours", "1 day", "3 days", "30 minutes"]
+periods = ["2 hours", "24 hours", `${3 * 24} hours`, "0.5 hour"]
 types = ["Photo", "Legal Document", "General Document", "3D"]
 merchant_ids.length.times do
   Service.create(
@@ -135,10 +135,10 @@ customer_ids.length.times do
     number_of_copies: [1, 3, 5, 9, 23, 8].sample,
     ordered_by: current_customer_id,
     fulfilled_by: current_merchant_id,
-    payment_method: ["in-person", "online"].sample,
+    payment_method: ["in person", "online"].sample,
     payment_status: ["paid", "unpaid"].sample,
     pickup_location: User.where(id: current_merchant_id)[0].physical_address,
-    pickup_type: ["delivery", "in-persion"].sample,
+    pickup_type: ["delivery", "in persion"].sample,
     delivery_address: User.where(id: current_customer_id)[0].physical_address,
     placed_on: Faker::Date.backward,
     estimated_completion_time: periods.sample, # service type completion time * number of copies
