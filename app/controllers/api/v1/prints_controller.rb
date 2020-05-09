@@ -47,6 +47,7 @@ class Api::V1::PrintsController < ApplicationController
           }
         }
       else
+        p print_params
         result = { json: { "status": 400, "message": "Bad request" } }
       end
     else
@@ -73,6 +74,7 @@ class Api::V1::PrintsController < ApplicationController
   private
     def print_params
       params.permit(
+        :id,
         :print_type,
         :number_of_copies,
         :ordered_by,
@@ -88,7 +90,8 @@ class Api::V1::PrintsController < ApplicationController
         :user_id,
         :service_id,
         :total_cost,
-        :doc_to_print
+        :doc_to_print,
+        :print
       )
     end
 
